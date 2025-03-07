@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobe 8 Protro University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+    </style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif,'Times New Roman', Times, serif,'Block Ops One';
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(32, 32, 32, 0.9);
+            opacity: 90%;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            list-style: none;
+            font-style: Times New Roman;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links li a:hover {
+            color: #bdbdb4;
+        }
+        .nav-right {
+            display: flex;
+            align-items: left;
+            gap: 20px;
+            justify-content: left;
+        }
+        .login-btn {
+            background: transparent;
+            border: 1px solid #7c7b7b;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+            font-size: 10px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .login-btn:hover {
+            background: #757573;
+            color: #000000;
+        }
+        .hero {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+            background: url('shoes/background.png') no-repeat center center/cover;
+            text-align: left;
+            position: relative;
+            padding: 0 20px;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 10px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .hero-title {
+            font-size: 100px;
+            text-transform: normal;
+            margin: 0;
+            font-family: 'Black Ops One';
+        }
+        .hero-subtitle {
+            font-size: 45px;
+            text-transform: normal;
+            margin: 0;
+            font-family: 'Black Ops One';
+        }
+        .texts {
+            position: fixed;
+            font-weight: 525;
+            font-size: 17px;
+            bottom: 2rem;
+            left: 2rem;
+            text-align: left;
+            color: #ffffff;
+            padding: 0px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            opacity: 200%;
+        }
+        .footer {
+            text-align: right;
+            padding: 10px;
+            position: fixed;
+            bottom: 3%;
+            width: 100%;
+            font-weight: 525;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            font-size: 17px;
+        }
+        .kobee8-container {
+            position: absolute;
+            width: 100%;
+            text-align: right;
+            z-index: 1000;
+        }
+        .kobee8-image {
+            width: 600px;
+            height: 400px;
+            position: fixed;
+            bottom: 105px;
+            right: 50px;
+            padding-right: 0px;  
+            image-resolution: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="login-btn">LOGIN</button>
+                <span class="material-icons search-icon">search</span>
+                <span class="material-icons cart-icon">shopping_cart</span>
+            </div>
+        </nav>
+    </header>
 
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Kobe 8</h1>
+            <h2 class="hero-subtitle">Protro University</h2>
+        </div>
+    </main>
+    <div class="kobee8-container">
+        <img src="shoes/kobee8.png" class="kobee8-image">
+    </div>
+    <footer class="footer">
+        <h2 class="texts">
+            Buy | Sell | Trade | Pre Order<br>
+            Legit / Authentic Shoes<br>
+            Meetups & Shipping Nationwide
+        </h2>
+        <p>@JMA's FOOTWEAR</p>
+    </footer>
+</body>
+</html>
