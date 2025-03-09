@@ -1,0 +1,183 @@
+/* Contact Page Styles */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('shoes/nikeeee.jpg') no-repeat center/cover;
+    min-height: 100vh;
+    color: #fffafa;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.contact-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fffafa;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item .material-icons {
+    color: #fffafa;
+    font-size: 1.8rem;
+}
+
+.info-text h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #fffafa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-text p {
+    color: #fffafa;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.social-icon {
+    color: #fffafa;
+    text-decoration: none;
+}
+
+.social-icon .material-icons {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover .material-icons {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form {
+    flex: 1;
+    background: rgba(243, 242, 242, 0.8);
+    padding: 2rem;
+    border-radius: 4px;
+    max-width: 500px;
+}
+
+.contact-form h2 {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #646262;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #646262;
+    border-radius: 4px;
+    color: #646262;
+    font-size: 0.9rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(100, 98, 98, 0.6);
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #646262;
+    border: none;
+    border-radius: 4px;
+    color: #fffafa;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.send-btn:hover {
+    background: #a5a5a3;
+}
+
+.footer {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    color: #fffafa;
+    font-family: 'Black Ops One', cursive;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 5rem 1rem 2rem;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,86 @@
+/* Collection Page Styles */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('shoes/background2.jpg') no-repeat center/cover;
+    min-height: 100vh;
+    color: #fffafa;
+    font-family: 'Arial', sans-serif;
+}
+
+.collection-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+}
+
+.collection-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fffafa;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.product-card {
+    background: rgba(22, 22, 22, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #1a1a1a;
+    padding: 2rem;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-name {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fffafa;
+}
+
+.product-price {
+    color: #ff3333;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .collection-container {
+        padding: 5rem 1rem 2rem;
+    }
+
+    .collection-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+}

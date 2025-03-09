@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JMA's FOOTWEAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Collection.html">Collection</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+            <button class="search-btn"><span class="material-icons">search</span></button>
+            <button class="cart-btn"><span class="material-icons">shopping_cart</span></button>
+            <button class="login-btn">LOGIN</button>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <h1 class="contact-title">CONTACT US</h1>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <span class="material-icons">phone</span>
+                    <div class="info-text">
+                        <h3>Phone</h3>
+                        <p>0922-222-2222</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="material-icons">email</span>
+                    <div class="info-text">
+                        <h3>Email</h3>
+                        <p>jmafootwear69@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="material-icons">location_on</span>
+                    <div class="info-text">
+                        <h3>Address</h3>
+                        <p>Tangile St. Lapids Ville,<br>Tamboubong, San Rafael, Bulacan</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon"><span class="material-icons">facebook</span></a>
+                    <a href="#" class="social-icon"><span class="material-icons">public</span></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Type your message" required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>@JMA FOOTWEAR</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            const formGroups = this.getElementsByClassName('form-group');
+            
+            Array.from(formGroups).forEach(group => {
+                const input = group.querySelector('input, textarea');
+                const errorMessage = group.querySelector('.error-message');
+                
+                if (!input.value.trim()) {
+                    group.classList.add('error');
+                    isValid = false;
+                } else {
+                    group.classList.remove('error');
+                }
+            });
+
+            if (isValid) {
+                const formData = {
+                    fullName: document.getElementById('fullName').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                };
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+                Array.from(formGroups).forEach(group => group.classList.remove('error'));
+            }
+        });
+
+        // Remove error state when user starts typing
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                this.closest('.form-group').classList.remove('error');
+            });
+        });
+    </script>
+</body>
+</html>
